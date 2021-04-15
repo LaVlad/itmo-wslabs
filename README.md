@@ -23,7 +23,7 @@
     In lab2, use following commands as arguments:
 
    |  command  | description |
-       |:--------:|:---|
+   |:--------:|:---|
    |   get     | Get existing entries of database. Works with flags above. |
    |   create     | Create new database entry. Use flags above to specify field values. |
    |   delete     | Delete database entry. -i flag required to specify ID of entry to be deleted. |

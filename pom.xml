@@ -28,15 +28,18 @@
     <profiles>
         <profile>
             <id>lab-1-standalone</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
         </profile>
         <profile>
             <id>lab-1-j2ee</id>
         </profile>
         <profile>
             <id>lab-2</id>
+        </profile>
+        <profile>
+            <id>lab-3</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
     </profiles>
 

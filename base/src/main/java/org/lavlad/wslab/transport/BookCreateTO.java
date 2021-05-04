@@ -21,7 +21,6 @@ public class BookCreateTO {
     @Min(value = 0, message = "pages must be greater or equal to 0")
     private Long pages;
 
-    @Null
     @Size(min = 1, max = 255)
     private String synopsis;
 }

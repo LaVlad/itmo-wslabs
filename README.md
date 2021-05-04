@@ -7,6 +7,7 @@
     |   1     | lab-1-standalone | Standalone implementation |
     |   1     | lab-1-j2ee      | J2EE Tomee based implementation |
     |   2     | lab-2 |  |
+    |   3     |lab-3  |  |
 
 2. Execute ```run.bat``` script
 3. Execute ```java -jar wslab-client.jar```.    
@@ -20,7 +21,7 @@
     |   -p     | Filter by number of pages |
     |   -s     | Filter by synopsis |
 
-    In lab2, use following commands as arguments:
+    In lab2 and lab3, use following commands as arguments:
 
    |  command  | description |
    |:--------:|:---|

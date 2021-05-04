@@ -25,6 +25,5 @@ public class BookUpdateTO {
     private Long pages;
 
     @Size(min = 1, max = 255)
-    @Null
     private String synopsis;
 }

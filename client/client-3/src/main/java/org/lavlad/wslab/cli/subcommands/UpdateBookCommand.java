@@ -37,12 +37,12 @@ public class UpdateBookCommand implements Runnable, BookServiceProvider {
         boolean result = false;
         try {
             bookService.updateBook(bookUpdateTO);
-            System.out.printf("update book #%d: {title: '%s', author: '%s', pages: %d%s}\n",
+            System.out.printf("Book #%d updated:\nTitle: %s\nAuthor: %s\nPages: %d\n%s\n",
                     id,
                     title,
                     author,
                     pages,
-                    synopsis == null ? "" : String.format(", synopsis: '%s'", synopsis)
+                    synopsis == null ? "" : String.format("Synopsis: \"%s\"", synopsis)
             );
         } catch (BookNotFoundException e) {
             System.out.println(e.getFaultInfo().getMessage());

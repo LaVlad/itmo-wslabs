@@ -30,7 +30,7 @@ public class CreateBookCommand implements Runnable, BookServiceProvider {
         Long id = null;
         try {
             id = bookService.createBook(createTO);
-            System.out.println("book created with id: "+id);
+            System.out.println("Book created with id: "+id);
         } catch (BookCreateException e) {
             BookCreateFault fault = e.getFaultInfo();
             fault.getViolationMessages().forEach(System.out::println);

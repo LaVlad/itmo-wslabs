@@ -3,9 +3,9 @@ package org.lavlad.wslab.transport;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.validation.constraints.Min;
-import javax.validation.constraints.Null;
 
 @Data
 @NoArgsConstructor
@@ -15,7 +15,7 @@ public class BookSearchTO {
     private Long id;
     private String title;
     private String author;
-    @Min(value = 0, message = "pages must be greater or equal to 0")
+    @Min(value = 0, message = "Pages value must be greater or equal than 0")
     private Long pages;
     private String synopsis;
 

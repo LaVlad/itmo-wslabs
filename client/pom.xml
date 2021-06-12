@@ -5,6 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>client-4</module>
+        <module>client-5</module>
     </modules>
 
     <parent>
@@ -53,6 +54,12 @@
             <id>lab-4</id>
             <modules>
                 <module>client-4</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>lab-5</id>
+            <modules>
+                <module>client-5</module>
             </modules>
         </profile>
     </profiles>

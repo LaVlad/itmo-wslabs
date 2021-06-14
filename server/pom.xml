@@ -6,6 +6,7 @@
     <modules>
         <module>lab4-j2ee</module>
         <module>lab5</module>
+        <module>lab6</module>
     </modules>
 
     <parent>
@@ -60,6 +61,12 @@
             <id>lab-5</id>
             <modules>
                 <module>lab5</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>lab-6</id>
+            <modules>
+                <module>lab6</module>
             </modules>
         </profile>
     </profiles>

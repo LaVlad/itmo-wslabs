@@ -47,6 +47,9 @@
         <profile>
             <id>lab-5</id>
         </profile>
+        <profile>
+            <id>lab-6</id>
+        </profile>
     </profiles>
 
     <build>

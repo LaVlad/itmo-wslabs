@@ -8,6 +8,10 @@
     |   1     | lab-1-j2ee      | J2EE Tomee based implementation |
     |   2     | lab-2 |  |
     |   3     | lab-3 |  |
+    |   4     | lab-4 |  |
+    |   5     | lab-5 |  |
+    |   6     | lab-6 |  |
+    |   7     | lab-7 |  |
 
 2. Execute ```run.bat``` script
 3. Execute ```java -jar wslab-client.jar```.    
@@ -34,3 +38,9 @@
 1. ```mvn clean package -P lab-2```
 2. ```run.bat```
 3. ```java -jar wslab-client.jar get```
+
+# Lab 7 execution and testing
+1. `mvn clean package -P lab-7`
+2. run the `run_juddi.sh` script
+3. To create new service: `java -jar wslab-client.jar create -b 'your_business_name' -s 'your_service_name'`
+4. To get previously created service: `java -jar wslab-client.jar get -n 'your_service_name'`

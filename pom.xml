@@ -37,9 +37,6 @@
         </profile>
         <profile>
             <id>lab-3</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
         </profile>
         <profile>
             <id>lab-4</id>
@@ -49,6 +46,12 @@
         </profile>
         <profile>
             <id>lab-6</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>lab-7</id>
         </profile>
     </profiles>
 

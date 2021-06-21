@@ -10,9 +10,15 @@ public class DeleteBookCommand implements Runnable, BookServiceProvider {
     @Option(names = {"-i", "--id"}, required = true)
     private Long id;
 
+    @Option(names = {"--username"})
+    private String username;
+
+    @Option(names = {"--password"})
+    private String password;
+
     @Override
     public void run() {
-        BookWebService bookWebService = this.get();
+        BookWebService bookWebService = this.getWithAuth(username, password);
         bookWebService.deleteBook(id);
         System.out.println("Deleted book with id " + id);
     }

@@ -26,9 +26,15 @@ public class GetBooksCommand implements Runnable, BookServiceProvider {
     @Option(names = {"-s", "--synopsis"})
     private String synopsis;
 
+    @Option(names = {"--username"})
+    private String username;
+
+    @Option(names = {"--password"})
+    private String password;
+
     @Override
     public void run() {
-        BookWebService bookService = this.get();
+        BookWebService bookService = this.getWithAuth(username, password);
         BookSearchTO bookSearchTO = new BookSearchTO();
         bookSearchTO.setId(id);
         bookSearchTO.setSynopsis(synopsis);

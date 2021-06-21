@@ -21,6 +21,12 @@ public class CreateBookCommand implements Runnable, BookServiceProvider {
     @Option(names = {"-s", "--synopsis"})
     private String synopsis;
 
+    @Option(names = {"--username"})
+    private String username;
+
+    @Option(names = {"--password"})
+    private String password;
+
     @Override
     public void run() {
         BookCreateTO bookCreateTO = new BookCreateTO();
@@ -28,7 +34,7 @@ public class CreateBookCommand implements Runnable, BookServiceProvider {
         bookCreateTO.setAuthor(author);
         bookCreateTO.setPages(pages);
         bookCreateTO.setSynopsis(synopsis);
-        BookWebService bookWebService = this.get();
+        BookWebService bookWebService = this.getWithAuth(username, password);
         BookTO createdBook = bookWebService.createBook(bookCreateTO);
         System.out.println("Book created: " + "\nId: " + createdBook.getId() + "\nTitle: " + createdBook.getTitle()
                 + "\nAuthor: " + createdBook.getAuthor() + "\nPages: " + createdBook.getPages()

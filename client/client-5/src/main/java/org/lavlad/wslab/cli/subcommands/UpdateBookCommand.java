@@ -24,6 +24,12 @@ public class UpdateBookCommand implements Runnable, BookServiceProvider {
     @Option(names = {"-s", "--synopsis"})
     private String synopsis;
 
+    @Option(names = {"--username"})
+    private String username;
+
+    @Option(names = {"--password"})
+    private String password;
+
     @Override
     public void run() {
         BookUpdateTO bookUpdateTO = new BookUpdateTO();
@@ -32,7 +38,7 @@ public class UpdateBookCommand implements Runnable, BookServiceProvider {
         bookUpdateTO.setId(id);
         bookUpdateTO.setSynopsis(synopsis);
         bookUpdateTO.setPages(pages);
-        BookWebService bookWebService = this.get();
+        BookWebService bookWebService = this.getWithAuth(username, password);
         BookTO updatedBook = bookWebService.updateBook(id, bookUpdateTO);
         System.out.println("Book updated: " + "\nId: " + updatedBook.getId() + "\nTitle: " + updatedBook.getTitle()
                 + "\nAuthor: " + updatedBook.getAuthor() + "\nPages: " + updatedBook.getPages()
